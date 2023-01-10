@@ -1,5 +1,10 @@
 @startuml c4_component
-!include ./c4_container.puml
+
+!if %variable_exists("RELATIVE_INCLUDE")
+  !include ./c4_container.puml
+!else
+  !include https://ghproxy.com/https://raw.githubusercontent.com/IDarkBoss/PlantUML_Layout/main/c4_container.puml
+!endif
 
 ' Scope: A single container.
 ' Primary elements: Components within the container in scope.

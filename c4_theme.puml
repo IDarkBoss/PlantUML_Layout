@@ -1,7 +1,10 @@
 @startuml c4-theme-default
-!include https://unpkg.com/plantuml-style-c4@latest/colors.puml
-' uncomment the following line and comment the first to use locally
-'!include ./colors.puml
+
+!if %variable_exists("RELATIVE_INCLUDE")
+  !include ./colors.puml
+!else
+  !include https://ghproxy.com/https://raw.githubusercontent.com/IDarkBoss/PlantUML_Layout/main/colors.puml
+!endif
 
 ' Colors
 ' ##################################

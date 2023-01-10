@@ -1,7 +1,16 @@
 @startuml core
 
-!include ./colors.puml
-!include ./skinparam.puml
+!if %variable_exists("RELATIVE_INCLUDE")
+  !include ./colors.puml
+!else
+  !include https://ghproxy.com/https://raw.githubusercontent.com/IDarkBoss/PlantUML_Layout/main/colors.puml
+!endif
+
+!if %variable_exists("RELATIVE_INCLUDE")
+  !include ./skinparam.puml
+!else
+  !include https://ghproxy.com/https://raw.githubusercontent.com/IDarkBoss/PlantUML_Layout/main/skinparam.puml
+!endif
 
 !define TECHN_FONT_SIZE 12
 

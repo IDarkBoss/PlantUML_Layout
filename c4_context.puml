@@ -1,5 +1,10 @@
 @startuml c4_context
-!include ./c4.puml
+
+!if %variable_exists("RELATIVE_INCLUDE")
+  !include ./c4.puml
+!else
+  !include https://ghproxy.com/https://raw.githubusercontent.com/IDarkBoss/PlantUML_Layout/main/c4.puml
+!endif
 
 ' Scope: A single software system.
 ' Primary elements: The software system in scope.

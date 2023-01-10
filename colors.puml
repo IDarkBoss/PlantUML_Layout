@@ -1,5 +1,10 @@
 @startuml corlor-define
-!include ./material-colors.puml
+
+!if %variable_exists("RELATIVE_INCLUDE")
+  !include ./material-colors.puml
+!else
+  !include https://ghproxy.com/https://raw.githubusercontent.com/IDarkBoss/PlantUML_Layout/main/material-colors.puml
+!endif
 
 ' Colors
 ' ##################################

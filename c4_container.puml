@@ -1,5 +1,10 @@
 @startuml c4_container
-!include ./c4_context.puml
+
+!if %variable_exists("RELATIVE_INCLUDE")
+  !include ./c4_context.puml
+!else
+  !include https://ghproxy.com/https://raw.githubusercontent.com/IDarkBoss/PlantUML_Layout/main/c4_context.puml
+!endif
 
 ' Scope: A single software system.
 ' Primary elements: Containers within the software system in scope.
